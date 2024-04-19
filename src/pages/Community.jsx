@@ -17,7 +17,7 @@ export const Community = () => {
            <div className="absolute top-0 h-full w-full flex flex-col justify-center">
                <div className="backdrop-blur-sm text-white drop-shadow-[2px_2px_2px_#00e1ff]">
                    <h1 className=" w-full text-center text-9xl  ">
-                       COMMUNITY
+                       COMUNIDAD
                    </h1>
 
                </div>
