@@ -13,7 +13,7 @@ export const Games = () => {
            <div className="absolute top-0 h-full w-full flex flex-col justify-center">
                <div className="backdrop-blur-sm text-white drop-shadow-[2px_2px_2px_#00e1ff]">
                    <h1 className=" w-full text-center text-9xl  ">
-                       JUEGOS EN LINEA
+                       ONLINE GAMES
                    </h1>
 
                </div>
@@ -22,7 +22,7 @@ export const Games = () => {
        <section>
             <div>
                 <h2 className=" my-10 w-full text-center text-6xl backdrop-blur-sm text-white drop-shadow-[2px_2px_2px_#00e1ff]  ">
-                        JUEGOS DE PIANO
+                        PIANOGAMES
                 </h2>
                 <div className="flex justify-center">
                     <div className="mx-10">
@@ -42,26 +42,26 @@ export const Games = () => {
                 </div>
 
                 <h2 className=" my-10 w-full text-center text-6xl backdrop-blur-sm text-white drop-shadow-[2px_2px_2px_#00e1ff]  ">
-                        JUEGOS DE DEPORTES
+                        SPORTS GAMES
                 </h2>
                 <div className="flex justify-center flex-wrap">
                     <div className="mx-10">
                     <h3 className=" my-10 w-full text-center text-xl backdrop-blur-sm text-white drop-shadow-[2px_2px_2px_#00e1ff]  ">
-                    FUTBOL DE CABEZAS
+                    SOCCER HEADS
                     </h3>
                     <iframe src="https://www.juegosjuegos.com/embed/soccer-heads" width="870" height="545" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" webkitallowfullscreen="true" mozallowfullscreen="true" msallowfullscreen="true" allowfullscreen="true" />
                     </div>
 
                     <div className="mx-10">
                     <h3 className=" my-10 w-full text-center text-xl backdrop-blur-sm text-white drop-shadow-[2px_2px_2px_#00e1ff]  ">
-                    MINIGOLF
+                    MINI GOLF
                     </h3>
                     <iframe src="https://www.juegosjuegos.com/embed/minigolf-world" width="800" height="600" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" webkitallowfullscreen="true" mozallowfullscreen="true" msallowfullscreen="true" allowfullscreen="true" />
                     </div>
 
                     <div className="mx-10">
                     <h3 className=" my-10 w-full text-center text-xl backdrop-blur-sm text-white drop-shadow-[2px_2px_2px_#00e1ff]  ">
-                    TENIS DE MESA
+                    TABLE TENNIS
                     </h3>
                     <iframe src="https://www.juegosjuegos.com/embed/table-tennis-world-tour" width="640" height="480" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" webkitallowfullscreen="true" mozallowfullscreen="true" msallowfullscreen="true" allowfullscreen="true" />
                     </div>

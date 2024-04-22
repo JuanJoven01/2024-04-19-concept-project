@@ -10,9 +10,9 @@ export const NavBar = () => {
             <ul className="flex m-10 h-16">
                 <li onClick={() => navigate('/')} className="m-5 hover:cursor-pointer hover:border-b-2 hover:text-blue-500 border-blue-500">Home</li>
                 <li onClick={() => navigate('/marketplace')} className="m-5 hover:cursor-pointer hover:border-b-2 hover:text-blue-500 border-blue-500">Marketplace</li>
-                <li onClick={() => navigate('/games')} className="m-5 hover:cursor-pointer hover:border-b-2 hover:text-blue-500 border-blue-500">Juegos en Linea</li>
-                <li onClick={() => navigate('/learning')} className="m-5 hover:cursor-pointer hover:border-b-2 hover:text-blue-500 border-blue-500">Herramientas de Aprendizaje</li>
-                <li onClick={() => navigate('/community')} className="m-5 hover:cursor-pointer hover:border-b-2 hover:text-blue-500 border-blue-500">Comunidad</li>
+                <li onClick={() => navigate('/games')} className="m-5 hover:cursor-pointer hover:border-b-2 hover:text-blue-500 border-blue-500">Online Games</li>
+                <li onClick={() => navigate('/learning')} className="m-5 hover:cursor-pointer hover:border-b-2 hover:text-blue-500 border-blue-500">Gaming Academy</li>
+                <li onClick={() => navigate('/community')} className="m-5 hover:cursor-pointer hover:border-b-2 hover:text-blue-500 border-blue-500">Community</li>
             </ul>
         </header>
     )

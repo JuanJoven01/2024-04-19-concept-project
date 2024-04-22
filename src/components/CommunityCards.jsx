@@ -2,7 +2,7 @@
 export const CommunityCards = (props) => {
     
     const sendMessage = () => {
-        window.open(`https://api.whatsapp.com/send?phone=573217200994&text=Hola, quiero unirme a la comunidad ${props.community}`, '_blank')
+        window.open(`https://api.whatsapp.com/send?phone=573217200994&text=Hello, I want to join the community ${props.community}`, '_blank')
     }
 
     return(
