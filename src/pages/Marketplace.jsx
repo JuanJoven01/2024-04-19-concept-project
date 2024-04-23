@@ -1,4 +1,4 @@
-import { useRef, useState } from "react"
+import { useRef, useState, useEffect } from "react"
 import { ItemCard } from "../components/ItemCard"
 
 
@@ -6,9 +6,6 @@ export const Marketplace = () => {
 
     const hardwareRef = useRef(true)
     const softwareRef = useRef(true)
-
-    const [onSoftware, setOnSoftware] = useState(true)
-    const [onHardware, setOnHardware] = useState(true)
 
     const hardware = [
         {
@@ -94,20 +91,45 @@ export const Marketplace = () => {
         },
     ]
 
+    const[elements, setElements] = useState([])
+
+    const verifyItems = () => {
+        if (hardwareRef.current.checked && softwareRef.current.checked){
+            setElements([...software,...hardware])
+        } else if(hardwareRef.current.checked && !softwareRef.current.checked ){
+            setElements([...hardware])
+        } else if (softwareRef.current.checked && !hardwareRef.current.checked){
+            setElements([...software])
+        } else{
+            setElements([])
+        }
+    }
+
+    useEffect(() => {
+        verifyItems()
+    }, []
+    )
+
+    
+
     const itemsToRender = () => {
-        console.log(hardwareRef)
-        console.log(softwareRef)
-        
-        return (
-            <div className="flex flex-wrap justify-center">
-                {hardware.map((item,index)=>(
-                <ItemCard key={index} source={item.source} alternative={item.alternative} title={item.title} caption={item.caption}   value={item.value}   />
-                ))}
-                {software.map((item,index)=>(
+        if (elements.length == 0){
+            return (
+                <h2 className="backdrop-blur-sm text-white drop-shadow-[2px_2px_2px_#00e1ff] text-center text-2xl my-44">
+                    SELECT ITEMS TO SHOW
+                </h2> 
+            )
+        }else{
+            return (
+                <div className="flex flex-wrap justify-center">
+                    {elements.map((item,index)=>(
                     <ItemCard key={index} source={item.source} alternative={item.alternative} title={item.title} caption={item.caption}   value={item.value}   />
-                ))}
-            </div>
-        )
+                    ))}
+                
+                </div>
+            )
+        }
+        
     }
 
     return(
@@ -130,15 +152,15 @@ export const Marketplace = () => {
                 <h2 className="backdrop-blur-sm text-white drop-shadow-[2px_2px_2px_#00e1ff] text-center text-2xl">
                     SELECT WHICH TYPES OF ELEMENTS YOU WANT TO DISPLAY:
                 </h2>
-                <div className="flex w-full justify-center backdrop-blur-sm text-white drop-shadow-[2px_2px_2px_#00e1ff] text-center text-xl">
+                <div className=" my-10 flex w-full justify-center backdrop-blur-sm text-white drop-shadow-[2px_2px_2px_#00e1ff] text-center text-xl">
                     <label className="px-10"  htmlFor="software">
                         Software
-                        <input className="mx-5" name="software"  type="checkbox" ref={softwareRef} />
+                        <input defaultChecked='true' className="mx-5" name="software"  type="checkbox" ref={softwareRef} onChange={verifyItems} />
                     </label>
                     
                     <label className="px-10" htmlFor="hardware">
                         Hardware
-                        <input className="mx-5" name="hardware" type="checkbox" ref={hardwareRef} />
+                        <input defaultChecked='true' className="mx-5" name="hardware" type="checkbox" ref={hardwareRef} onChange={verifyItems} />
                     </label>    
                 </div>
             </section>
