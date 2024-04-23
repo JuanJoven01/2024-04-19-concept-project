@@ -21,7 +21,7 @@ export const ItemCard = (props) => {
                         {props.caption}
                     </p>
                 </div>
-                <button onClick={sendMessage} className="h-[25%] w-[75%] border-2 mb-2 bg-blue-500 hover:shadow-lg hover:shadow-sky-600 hover:cursor-pointer hover:animate-pulse" >Comprar!</button>
+                <button onClick={sendMessage} className="h-[25%] w-[75%] border-2 mb-2 bg-blue-500 hover:shadow-lg hover:shadow-sky-600 hover:cursor-pointer hover:animate-pulse" >Buy!</button>
             </figcaption>
         </figure>
     )
